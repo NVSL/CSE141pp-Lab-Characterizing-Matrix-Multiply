@@ -35,9 +35,9 @@ int main(int argc, char *argv[]) {
 	uint64_t mat_size_large;
 	uint32_t iterations;
   
-	archlab_add_si_option<uint64_t>("mat-small",  mat_size_small, 512+256,  "Small memory region size (bytes).");
-	archlab_add_si_option<uint64_t>("mat-large",  mat_size_large, 512+256,  "Large region size (bytes).");
-	archlab_add_si_option<uint32_t>("iterations", iterations , 5,  "Repetitions");
+	archlab_add_si_option<uint64_t>("mat-small",  mat_size_small, 512 ,  "Small memory region size (bytes).");
+	archlab_add_si_option<uint64_t>("mat-large",  mat_size_large, 1*KB,  "Large region size (bytes).");
+	archlab_add_si_option<uint32_t>("iterations", iterations , 2,  "Repetitions");
 		     
 	fprintf(stderr, "parsing command line\n");
 
@@ -61,6 +61,8 @@ int main(int argc, char *argv[]) {
 		// fprintf(stderr, "correct value is %f\n", correct);
 		fprintf(stderr, "starting submitted code with size: %ld\n", size);
 		pristine_machine(); // clear caches, disable turbo boost, reset clock speed
+		int MHZ = std::getenv("MHZ");
+		set_cpu_clock_frequency(MHZ);
 		{
 			ArchLabTimer timer; 
 			timer.attr("matrix_size", size).
