@@ -2,7 +2,7 @@
 # affect how your code runs locally.  It will not change how your code
 # executes in the cloud.
  
-lab_name = "Dot Product"
+lab_name = "Characterizing Matrix Multiply"
 output_files = ['submission/code.out', 'submission/code-stats.csv', 'foo']
 input_files = ['submission/code.c']
 run_cmd = ['make', '-C', 'submission']
