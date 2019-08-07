@@ -1,0 +1,5 @@
+ # You can set options here
+compiler=gcc-9
+MHz=clang #an options
+optimize=-O0
+
