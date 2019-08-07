@@ -3,14 +3,14 @@
 # executes in the cloud.
  
 lab_name = "Characterizing Matrix Multiply"
-output_files = ['submission/code.out', 'submission/code-stats.csv', 'foo']
+output_files = ['submission/code.out', 'submission/code-stats.csv']
 input_files = ['submission/code.c', 'config']
 run_cmd = ['make', '-C', 'submission']
 clean_cmd = ['make', 'clean']
 env = ['CC','CXX','CFLAGS','CXXFLAGS']
 repo = "https://github.com/NVSL/CSE141pp-Lab-Characterizing-Matrix-Multiply.git"
 reference_tag = "314bfbd09ab3a28b446742234851eeef2c29dcba"
-time_limit = 40
+time_limit = 60
 
 valid_options={
     "compiler":

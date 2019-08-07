@@ -35,9 +35,9 @@ int main(int argc, char *argv[]) {
 	uint64_t mat_size_large;
 	uint32_t iterations;
   
-	archlab_add_si_option<uint64_t>("mat-small",  mat_size_small, 512 ,  "Small memory region size (bytes).");
-	archlab_add_si_option<uint64_t>("mat-large",  mat_size_large, 1*KB,  "Large region size (bytes).");
-	archlab_add_si_option<uint32_t>("iterations", iterations , 1,  "Repetitions");
+	archlab_add_si_option<uint64_t>("mat-small",  mat_size_small, 512+256,  "Small memory region size (bytes).");
+	archlab_add_si_option<uint64_t>("mat-large",  mat_size_large, 512+256,  "Large region size (bytes).");
+	archlab_add_si_option<uint32_t>("iterations", iterations , 5,  "Repetitions");
 		     
 	fprintf(stderr, "parsing command line\n");
 
