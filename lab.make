@@ -2,7 +2,7 @@ CMD_LINE_ARGS=--engine papi --stat PAPI_L2_STM --stat rapl:::PACKAGE_ENERGY:PACK
 include $(ARCHLAB_ROOT)/compile.make
 
 %.gprof: %.exe gmon.out
-  gprof %.exe > %.gprof
+	prof %.exe > %.gprof
 
 .PHONY: run-submission
 run-submission: default
