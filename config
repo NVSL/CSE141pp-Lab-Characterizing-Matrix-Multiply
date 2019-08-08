@@ -1,5 +1,5 @@
  # You can set options here
 compiler=gcc-9
-MHz=2000 #an options
+MHz=1500
 optimize=-O0
 
