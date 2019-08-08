@@ -10,7 +10,7 @@ clean_cmd = ['make', 'clean']
 env = ['CC','CXX','CFLAGS','CXXFLAGS']
 repo = "https://github.com/NVSL/CSE141pp-Lab-Characterizing-Matrix-Multiply.git"
 reference_tag = "314bfbd09ab3a28b446742234851eeef2c29dcba"
-time_limit = 60
+time_limit = 90
 
 valid_options={
     "compiler":
