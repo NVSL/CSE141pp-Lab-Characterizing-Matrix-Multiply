@@ -1,3 +1,4 @@
-# CSE141pp-Introduction-to-the-Development-Environment
+# CSE141pp-Lab-Characterizing-Matrix-Multiply
 
-See https://github.com/NVSL/CSE141pp_Resources/tree/master/labs/Introduction-to-the-Development-Environment for instructions on how to complete this lab.
+
+See https://github.com/NVSL/CSE141pp_Resources for instructions on how to complete this lab.
