@@ -1,6 +1,6 @@
 include ../lab.make
 
-default: code.out
+default: code.out $(EXTRA_TARGETS)
 
 .PHONY: run-submission
 run-submission: default

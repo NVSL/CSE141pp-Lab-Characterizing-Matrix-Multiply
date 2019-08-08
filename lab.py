@@ -3,7 +3,7 @@
 # executes in the cloud.
  
 lab_name = "Characterizing Matrix Multiply"
-output_files = ['submission/code.out', 'submission/code-stats.csv']
+output_files = ['submission/code.out', 'submission/code-stats.csv', 'submission/code.gprof']
 input_files = ['submission/code.c', 'config']
 run_cmd = ['make', '-C', 'submission']
 clean_cmd = ['make', 'clean']
@@ -42,6 +42,14 @@ valid_options={
         {'OPT_FLAGS': '-O3 -mno-mmx'}
         },
     "MHz" : lambda x: {"MHZ": str(int(x))}
+    "profiler" :
+        {
+        'gprof' : 
+        {'PROFILE_FLAGS': '-pg',
+         'LD_OPTS': '-pg',
+         'EXTRA_TARGETS': 'code.gprof'
+        },
+        },
     }
 
 default_options={
