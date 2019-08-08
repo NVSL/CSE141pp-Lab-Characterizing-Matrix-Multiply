@@ -41,7 +41,7 @@ valid_options={
         '-O3' : 
         {'OPT_FLAGS': '-O3 -mno-mmx'}
         },
-    "MHz" : lambda x: {"MHZ": str(int(x))}
+    "MHz" : lambda x: {"MHZ": str(int(x))},
     "profiler" :
         {
         'gprof' : 
