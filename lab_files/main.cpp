@@ -61,9 +61,11 @@ int main(int argc, char *argv[]) {
 		// fprintf(stderr, "correct value is %f\n", correct);
 		fprintf(stderr, "starting submitted code with size: %ld\n", size);
 		pristine_machine(); // clear caches, disable turbo boost, reset clock speed
-		int MHZ = atoi(std::getenv("MHZ"));
-		fprintf(stderr, "MHz set to: %d\n", MHZ);
-		set_cpu_clock_frequency(MHZ);
+                if (std::getenv("MHZ") != nullptr) {
+			int MHZ = atoi(std::getenv("MHZ"));
+			fprintf(stderr, "MHz set to: %d\n", MHZ);
+			set_cpu_clock_frequency(MHZ);
+		}
 		{
 			ArchLabTimer timer; 
 			timer.attr("matrix_size", size).
